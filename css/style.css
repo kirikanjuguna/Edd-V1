@@ -6,6 +6,211 @@
  */
 /* Updated filter buttons styles */
 
+/* Start of dev-portfolio section  */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #111;
+  color: #ffd700;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dev-portfolio .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.8rem;
+  color: #ffd700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.dev-portfolio .website-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+  animation: slideUp 0.5s ease-in-out;
+  gap: 20px;
+}
+
+@keyframes slideUp {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.dev-portfolio .website-project {
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  box-shadow: 0 8px 12px rgba(255, 215, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ffd700;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 100%;
+}
+
+.dev-portfolio .website-project:hover {
+  transform: translateY(-10px);
+}
+
+.dev-portfolio .preview {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 20px; /* Reduced padding to reduce extra spacing */
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  position: relative;
+  align-items: flex-end;
+}
+
+.dev-portfolio .website-project:hover .preview {
+  transform: scale(1.05);
+}
+
+.dev-portfolio .rectangle {
+  background-color: #000;
+  border: 2px solid #ffd700;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  padding: 0; /* Removed extra padding */
+  position: relative;
+}
+
+/* Increased dimensions for previews and adjusted spacing */
+.dev-portfolio .desktop-preview {
+  width: 80%; /* Laptop preview width */
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 0;
+}
+
+.dev-portfolio .mobile-preview {
+  width: 25%; /* Smartphone preview width */
+  height: 300px;
+  aspect-ratio: 9 / 13;
+  margin-bottom: 0;
+}
+
+/* Adjusted Description Section */
+.dev-portfolio .description {
+  padding: 15px;
+  text-align: center;
+  max-width: 25%; /* Reduced width for the description */
+  font-family: 'Courier New', monospace;
+  color: #ffd700;
+  background-color: #222;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(255, 215, 0, 0.3);
+  transition: background-color 0.3s ease;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  line-height: 1.6;
+}
+
+.dev-portfolio .description h3 {
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  color: #ffd700;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.dev-portfolio .description p {
+  margin-bottom: 20px;
+  color: #ddd;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.dev-portfolio .visit-link {
+  padding: 12px 25px;
+  background-color: #ffd700;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.dev-portfolio .visit-link:hover {
+  background-color: #000;
+  color: #ffd700;
+  border: 1px solid #ffd700;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffd700;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #222;
+  border-radius: 10px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .dev-portfolio .website-row {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .dev-portfolio .website-project {
+      flex-direction: column;
+  }
+
+  .dev-portfolio .preview {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .dev-portfolio .desktop-preview,
+  .dev-portfolio .mobile-preview {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .dev-portfolio .description {
+      max-width: 100%;
+      text-align: center;
+  }
+}
+/*End of dev-portfolio section */
 
 .filter-buttons {
   margin-bottom: 20px;
